@@ -27,7 +27,7 @@ DigitalDistortion::DigitalDistortion(IPlugInstanceInfo instanceInfo)
   TRACE;
 
   //arguments are: name, defaultVal, minVal, maxVal, step, label
-  GetParam(kThreshold)->InitDouble("Distortion", 0.0, 0.0, 80.00, 0.01, "%");
+  GetParam(kThreshold)->InitDouble("Distortion", 0.0, 0.0, 99.99, 0.01, "%");
   GetParam(kThreshold)->SetShape(1.);
 
   IGraphics* pGraphics = MakeGraphics(this, kWidth, kHeight);
@@ -94,9 +94,9 @@ void DigitalDistortion::OnParamChange(int paramIdx)
 
 void DigitalDistortion::CreatePresets()
 {
-	MakePreset("Clean", 80.0);
-	MakePreset("Slightly distorted", 60.0);
-	MakePreset("Wooo", 40.0);
-	MakePreset("Wawi", 20.0);
-	MakePreset("Why would you use this", 0.01);
+	MakePreset("Ear rape", 99.99);
+	MakePreset("Heavy Distortion", 60.0);
+	MakePreset("Moderate Distortion", 40.0);
+	MakePreset("Slight Distortion", 20.0);
+	MakePreset("Not even useful", 0.01);
 }
